@@ -76,17 +76,6 @@ EGuessStatut FBullCowGame::CheckGuessValidity(std::string Guess) {
 		}
 	}
 
-	/* This part has been removed because underoptimized
-	for (int i = 0; i < GetWordLength(); i++) {
-		for (int j = 0; j < GetWordLength(); j++) {
-			if (j != i && Guess[i] == Guess[j]) { //isogram check
-				cout << "Guess is not isogram, retry\n" << "\n";
-				return NotIsogram;
-			}
-		}
-	}
-	*/
-
 	if (IsIsogram(Guess) == false) {
 		cout << "Guess is not isogram, retry with a word without repeating letter\n\n";
 		return NotIsogram;
