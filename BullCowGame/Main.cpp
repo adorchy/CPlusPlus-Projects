@@ -5,27 +5,20 @@ For game logic see the FBULLCOWGame class.
 */
 
 
-#include "HeaderBullCowGame.h"
+#include "BullCowGame.h"
 
 
 int main() {
 	
-	FBullCowGame BCGame;
+	FBullCowGame myGame;
 	bool GameState = false; // instantiate a  new game
 
 	do {
-		BCGame.Init();
-		PrintIntro(BCGame);
-		PlayGame(BCGame);
-		GameState = AskToPlayAgain();
+		myGame.PrintIntro();
+		myGame.PlayGame();
+		GameState = myGame.AskToPlayAgain();
 	} while (GameState == true);
 
 	return 0;
 }
 
-/*
-TODO for unreal use
-using FTest = std::string;
-using STring = std::string;
-
-*/
